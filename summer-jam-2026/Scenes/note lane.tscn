@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dxochiemmusyd"]
+
+[ext_resource type="Script" uid="uid://bm2rrreuaixnp" path="res://Scenes/note_lane.gd" id="1_m21ut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0qes"]
+size = Vector2(8, 8)
+
+[node name="NoteLane" type="Node2D" unique_id=1457790323 node_paths=PackedStringArray("lane", "note")]
+script = ExtResource("1_m21ut")
+lane = NodePath("Lane")
+note = NodePath("Note")
+
+[node name="Lane" type="Area2D" parent="." unique_id=1481782904]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lane" unique_id=2058407836]
+shape = SubResource("RectangleShape2D_r0qes")
+
+[node name="Note" type="Area2D" parent="." unique_id=395612533]
+position = Vector2(0, 50)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Note" unique_id=875301203]
+shape = SubResource("RectangleShape2D_r0qes")
+
+[connection signal="area_entered" from="Lane" to="." method="_on_note_area_entered" flags=18]
+[connection signal="area_exited" from="Lane" to="." method="_on_note_area_exited" flags=18]
