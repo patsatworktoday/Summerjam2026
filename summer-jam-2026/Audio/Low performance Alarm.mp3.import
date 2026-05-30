@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5rjooss752lo"
+path="res://.godot/imported/Low performance Alarm.mp3-a82af66001da1d13cd2809ca666e0832.mp3str"
+
+[deps]
+
+source_file="res://Audio/Low performance Alarm.mp3"
+dest_files=["res://.godot/imported/Low performance Alarm.mp3-a82af66001da1d13cd2809ca666e0832.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

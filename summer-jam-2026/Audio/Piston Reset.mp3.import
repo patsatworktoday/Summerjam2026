@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ceib7eq1ximi3"
+path="res://.godot/imported/Piston Reset.mp3-4fdf8504b41c0f64d20d2c5eaadf9020.mp3str"
+
+[deps]
+
+source_file="res://Audio/Piston Reset.mp3"
+dest_files=["res://.godot/imported/Piston Reset.mp3-4fdf8504b41c0f64d20d2c5eaadf9020.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
