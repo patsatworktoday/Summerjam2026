@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b88uq7auvufuw"]
+
+[ext_resource type="Script" uid="uid://dysvqy48s7q8o" path="res://Scenes/menu.gd" id="1_1rerr"]
+[ext_resource type="Texture2D" uid="uid://dccrsq56rpjg1" path="res://icon.svg" id="2_xhh6f"]
+
+[node name="Menu" type="Control" unique_id=1760236872]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1rerr")
+
+[node name="BG" type="Control" parent="." unique_id=138790167]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BGSprite" type="Sprite2D" parent="BG" unique_id=944182612]
+texture = ExtResource("2_xhh6f")
+
+[node name="Centre" type="VBoxContainer" parent="." unique_id=1053783353]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -370.0
+offset_right = 200.0
+offset_bottom = 370.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Centre" unique_id=97454225]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+bbcode_enabled = true
+text = "[font_size=48]Untitled Game[/font_size]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="StartGame" type="Button" parent="Centre" unique_id=1796711552]
+layout_mode = 2
+text = "Start"
+
+[node name="QuitGame" type="Button" parent="Centre" unique_id=493614100]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Centre/StartGame" to="." method="start_game"]
+[connection signal="pressed" from="Centre/QuitGame" to="." method="quit_game"]
