@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://drluqvdaveb5g"]
 
+[ext_resource type="Script" uid="uid://qsiuupbx5tmc" path="res://Scenes/chart.gd" id="1_a8a4l"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4dbi"]
 
-[node name="Chart" type="Node2D" unique_id=1895716848]
+[node name="Chart" type="Node2D" unique_id=1895716848 node_paths=PackedStringArray("notes")]
+script = ExtResource("1_a8a4l")
+notes = [NodePath("Note"), NodePath("Note2"), NodePath("Note3"), NodePath("Note4")]
 
 [node name="Note" type="Area2D" parent="." unique_id=347699428]
 
