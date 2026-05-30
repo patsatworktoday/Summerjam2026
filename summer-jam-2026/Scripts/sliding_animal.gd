@@ -4,7 +4,8 @@ extends AnimatedSprite2D
 var will_live:bool 
 var falling:bool
 var has_child:bool
-var init_scale
+var init_scale:Vector2
+var init_pusher_scale:Vector2
 var idle_string:String = "sheep_idle"
 var die_string = "sheep_die"
 
@@ -25,6 +26,7 @@ func _ready() -> void:
 	play(idle_string)
 	will_live = true
 	init_scale = self.scale
+	init_pusher_scale = pusher.scale
 	falling = false
 	has_child = false
 
@@ -60,6 +62,7 @@ func _process(delta: float) -> void:
 			play(die_string)
 			will_live = false
 			Audio.play_track(0)
+			
 			await self.animation_finished
 			Audio.play_track(1)
 			blood_spatter.emit()
@@ -67,6 +70,8 @@ func _process(delta: float) -> void:
 			
 	
 	if falling == true:
+		pusher.scale = pusher.scale * (1-(1 * delta))
+		pusher.scale = clamp(pusher.scale,init_pusher_scale,Vector2(5,5))
 		blood_spatter.emit()
 		self.global_position.y += movement_speed
 		self.global_position.x = mulcher.global_position.x
