@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dxochiemmusyd"]
 
 [ext_resource type="Script" uid="uid://bm2rrreuaixnp" path="res://Scenes/note_lane.gd" id="1_m21ut"]
+[ext_resource type="Texture2D" uid="uid://dns0fxs1fn3h0" path="res://rhythm-bg.png" id="2_6xfaf"]
 [ext_resource type="PackedScene" uid="uid://drluqvdaveb5g" path="res://Scenes/Chart.tscn" id="2_r0qes"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0qes"]
@@ -21,6 +22,11 @@ laneKeyMap = {
 blank = NodePath("Blank")
 chart = NodePath("Chart")
 chartSpeed = 64.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=505643737]
+position = Vector2(35, -69)
+scale = Vector2(0.291, 0.291)
+texture = ExtResource("2_6xfaf")
 
 [node name="Lane" type="Area2D" parent="." unique_id=1481782904]
 
