@@ -1,32 +1,19 @@
 [gd_scene format=3 uid="uid://drluqvdaveb5g"]
 
 [ext_resource type="Script" uid="uid://qsiuupbx5tmc" path="res://Scenes/chart.gd" id="1_a8a4l"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4dbi"]
+[ext_resource type="PackedScene" uid="uid://ytyt0yd65p14" path="res://Scenes/note.tscn" id="2_clpow"]
 
 [node name="Chart" type="Node2D" unique_id=1895716848 node_paths=PackedStringArray("notes")]
 script = ExtResource("1_a8a4l")
 notes = [NodePath("Note"), NodePath("Note2"), NodePath("Note3"), NodePath("Note4")]
 
-[node name="Note" type="Area2D" parent="." unique_id=347699428]
+[node name="Note" parent="." unique_id=225176391 instance=ExtResource("2_clpow")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Note" unique_id=872550877]
-shape = SubResource("RectangleShape2D_i4dbi")
+[node name="Note2" parent="." unique_id=1179412621 instance=ExtResource("2_clpow")]
+position = Vector2(24, -24)
 
-[node name="Note2" type="Area2D" parent="." unique_id=423031586]
-position = Vector2(24, 0)
+[node name="Note3" parent="." unique_id=240873202 instance=ExtResource("2_clpow")]
+position = Vector2(48, -48)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Note2" unique_id=1249250118]
-shape = SubResource("RectangleShape2D_i4dbi")
-
-[node name="Note3" type="Area2D" parent="." unique_id=1738013653]
-position = Vector2(48, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Note3" unique_id=1966190525]
-shape = SubResource("RectangleShape2D_i4dbi")
-
-[node name="Note4" type="Area2D" parent="." unique_id=459090756]
-position = Vector2(72, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Note4" unique_id=1726424020]
-shape = SubResource("RectangleShape2D_i4dbi")
+[node name="Note4" parent="." unique_id=1974844060 instance=ExtResource("2_clpow")]
+position = Vector2(72, -72)

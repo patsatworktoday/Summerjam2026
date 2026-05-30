@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://ytyt0yd65p14"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4dbi"]
-
-[node name="DefaultNote" type="Area2D" unique_id=225176391]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1611068817]
-shape = SubResource("RectangleShape2D_i4dbi")

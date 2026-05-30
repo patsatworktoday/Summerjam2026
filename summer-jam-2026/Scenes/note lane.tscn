@@ -49,13 +49,17 @@ shape = SubResource("RectangleShape2D_r0qes")
 position = Vector2(0, 300)
 
 [node name="MissZone" type="Area2D" parent="." unique_id=602177285]
-position = Vector2(36, -41)
+position = Vector2(36, 41)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MissZone" unique_id=1299306409]
 shape = SubResource("RectangleShape2D_6xfaf")
 
 [node name="Blank" type="Area2D" parent="." unique_id=990134028]
 position = Vector2(-24, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1431450383]
+position = Vector2(36, -132)
+zoom = Vector2(2.2, 2.2)
 
 [connection signal="area_entered" from="Lane" to="." method="_on_note_area_entered" flags=18]
 [connection signal="area_exited" from="Lane" to="." method="_on_note_area_exited" flags=18]

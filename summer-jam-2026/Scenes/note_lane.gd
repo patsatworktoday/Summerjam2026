@@ -21,6 +21,7 @@ func _ready() -> void:
 	for lane in lanes:
 		laneNotePresent.set(lane, blank)
 	connect("reset_chart", chart.reset_chart)
+	chart.transform.origin.y = -300
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -33,7 +34,7 @@ func _process(delta: float) -> void:
 			hits += 1
 			print("hits: {0}".format([hits]))
 	
-	chart.transform.origin.y -= delta * chartSpeed
+	chart.transform.origin.y += delta * chartSpeed
 	
 	# quick reset
 	if Input.is_action_just_pressed("ui_accept"):
@@ -41,7 +42,7 @@ func _process(delta: float) -> void:
 		hits = 0
 		misses = 0
 		emit_signal("reset_chart")
-		chart.transform.origin.y = 300
+		chart.transform.origin.y = -300
 
 # Note enters the input area, so a note is present
 func _on_note_area_entered(note: Area2D, lane: Area2D) -> void:
