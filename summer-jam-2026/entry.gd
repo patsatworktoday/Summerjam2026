@@ -9,11 +9,14 @@ extends Sprite2D
 @onready var attire_sprite = $Animal_sliding/Attire
 @onready var pusher:Sprite2D = get_tree().get_first_node_in_group("pusher") 
 var pusher_scale
+var score:float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pusher_scale = pusher.scale
+	score = 0
 	pass # Replace with function body.
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

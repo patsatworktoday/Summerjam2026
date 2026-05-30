@@ -2006,8 +2006,6 @@ shader_parameter/flash_amount = 0.0
 
 [node name="Animal_Slide" type="Node2D" unique_id=1631613320]
 
-[node name="Slide_Manager" type="Node" parent="." unique_id=1489174485]
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=818755127]
 z_index = 1
 position = Vector2(137, 268)
