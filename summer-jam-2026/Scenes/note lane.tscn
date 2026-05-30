@@ -5,14 +5,38 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0qes"]
 size = Vector2(8, 8)
 
-[node name="NoteLane" type="Node2D" unique_id=1457790323 node_paths=PackedStringArray("lane", "note")]
+[node name="NoteLane" type="Node2D" unique_id=1457790323 node_paths=PackedStringArray("lanes", "note", "laneKeyMap")]
 script = ExtResource("1_m21ut")
-lane = NodePath("Lane")
+lanes = [NodePath("Lane"), NodePath("Lane2"), NodePath("Lane3"), NodePath("Lane4")]
 note = NodePath("Note")
+laneKeyMap = {
+"ui_down": NodePath("Lane3"),
+"ui_left": NodePath("Lane"),
+"ui_right": NodePath("Lane4"),
+"ui_up": NodePath("Lane2")
+}
 
 [node name="Lane" type="Area2D" parent="." unique_id=1481782904]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lane" unique_id=2058407836]
+shape = SubResource("RectangleShape2D_r0qes")
+
+[node name="Lane2" type="Area2D" parent="." unique_id=1098362767]
+position = Vector2(12, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lane2" unique_id=2092349597]
+shape = SubResource("RectangleShape2D_r0qes")
+
+[node name="Lane3" type="Area2D" parent="." unique_id=836934103]
+position = Vector2(24, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lane3" unique_id=1114633937]
+shape = SubResource("RectangleShape2D_r0qes")
+
+[node name="Lane4" type="Area2D" parent="." unique_id=327710184]
+position = Vector2(36, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lane4" unique_id=1659804406]
 shape = SubResource("RectangleShape2D_r0qes")
 
 [node name="Note" type="Area2D" parent="." unique_id=395612533]
@@ -23,3 +47,9 @@ shape = SubResource("RectangleShape2D_r0qes")
 
 [connection signal="area_entered" from="Lane" to="." method="_on_note_area_entered" flags=18]
 [connection signal="area_exited" from="Lane" to="." method="_on_note_area_exited" flags=18]
+[connection signal="area_entered" from="Lane2" to="." method="_on_note_area_entered" flags=18]
+[connection signal="area_exited" from="Lane2" to="." method="_on_note_area_exited" flags=18]
+[connection signal="area_entered" from="Lane3" to="." method="_on_note_area_entered" flags=18]
+[connection signal="area_exited" from="Lane3" to="." method="_on_note_area_exited" flags=18]
+[connection signal="area_entered" from="Lane4" to="." method="_on_note_area_entered" flags=18]
+[connection signal="area_exited" from="Lane4" to="." method="_on_note_area_exited" flags=18]
