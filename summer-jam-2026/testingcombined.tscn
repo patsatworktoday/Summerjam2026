@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cu62spe7lnvu5"]
+
+[ext_resource type="Texture2D" uid="uid://bku1hc8typgr3" path="res://Sprites/image.png" id="1_tyf5f"]
+[ext_resource type="PackedScene" uid="uid://dxochiemmusyd" path="res://Scenes/note lane.tscn" id="2_2qm8j"]
+[ext_resource type="PackedScene" uid="uid://c213wlh6irtjl" path="res://Scenes/animal_slide.tscn" id="3_mf6oj"]
+
+[node name="Testingcombined" type="Node2D" unique_id=425233537]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=159241045]
+position = Vector2(620.25, 332.75)
+scale = Vector2(1.6718931, 1.686094)
+texture = ExtResource("1_tyf5f")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=2097176597]
+offset_left = -47.0
+offset_top = 109.99999
+offset_right = 300.0
+offset_bottom = 709.0
+rotation = -0.18663067
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=471684347]
+handle_input_locally = false
+size = Vector2i(347, 599)
+render_target_update_mode = 4
+
+[node name="NoteLane" parent="SubViewportContainer/SubViewport" unique_id=1457790323 node_paths=PackedStringArray("laneKeyMap") instance=ExtResource("2_2qm8j")]
+position = Vector2(153, 327)
+laneKeyMap = {
+"ui_down": NodePath("Lane3"),
+"ui_left": NodePath("Lane"),
+"ui_right": NodePath("Lane4"),
+"ui_up": NodePath("Lane2")
+}
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="." unique_id=1239947765]
+offset_left = 622.00006
+offset_top = 1.0
+offset_right = 1842.0
+offset_bottom = 630.0
+rotation = 0.064904414
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer2" unique_id=1965240930]
+handle_input_locally = false
+audio_listener_enable_2d = true
+size = Vector2i(624, 419)
+render_target_update_mode = 4
+
+[node name="Animal_Slide" parent="SubViewportContainer2/SubViewport" unique_id=1631613320 instance=ExtResource("3_mf6oj")]
+position = Vector2(16.999996, 37.000008)
+rotation = 0.0026168972
+scale = Vector2(0.535, 0.535)
+
+[node name="muzak_player" type="AudioStreamPlayer2D" parent="." unique_id=1894588102]

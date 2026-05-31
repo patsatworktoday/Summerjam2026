@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbjiuynrr84rd"
+path="res://.godot/imported/Blender Empty.mp3-59fdd80e2d155affa7a09360a909e158.mp3str"
+
+[deps]
+
+source_file="res://Audio/Blender Empty.mp3"
+dest_files=["res://.godot/imported/Blender Empty.mp3-59fdd80e2d155affa7a09360a909e158.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
