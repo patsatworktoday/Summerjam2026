@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cbfdsuyxqkn2v"]
+
+[ext_resource type="Script" uid="uid://b3hberwf52tgr" path="res://Scenes/chart_maker.gd" id="1_plrkf"]
+[ext_resource type="PackedScene" uid="uid://ytyt0yd65p14" path="res://Scenes/note.tscn" id="2_o5nhv"]
+[ext_resource type="AudioStream" uid="uid://b6hefid5uppk1" path="res://Music/Smart Casual Game Track.mp3" id="2_vubp6"]
+
+[node name="ChartMaker" type="Node2D" unique_id=505478445 node_paths=PackedStringArray("player", "followCam", "chartParent")]
+script = ExtResource("1_plrkf")
+player = NodePath("AudioStreamPlayer")
+laneKeyMap = Dictionary[String, float]({
+"ui_down": 48.0,
+"ui_left": 0.0,
+"ui_right": 72.0,
+"ui_up": 24.0
+})
+chartSpeed = 64.0
+notePS = ExtResource("2_o5nhv")
+followCam = NodePath("Camera2D")
+chartParent = NodePath("Chart")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=727067943]
+stream = ExtResource("2_vubp6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2089727924]
+
+[node name="Chart" type="Node2D" parent="." unique_id=1927917994]
