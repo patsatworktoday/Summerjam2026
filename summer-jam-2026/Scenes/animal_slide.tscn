@@ -32,8 +32,9 @@
 [ext_resource type="AudioStream" uid="uid://ceib7eq1ximi3" path="res://Audio/Piston Reset.mp3" id="23_7cm53"]
 [ext_resource type="AudioStream" uid="uid://du0v5iscjhtmi" path="res://Audio/Penguin SFX.mp3" id="23_rvgrv"]
 [ext_resource type="AudioStream" uid="uid://wkvvdrnvf60m" path="res://Audio/Falling SFX.mp3" id="24_3acor"]
+[ext_resource type="AudioStream" uid="uid://dw8psq8ntuy2r" path="res://Audio/Correct Stinger Improved.mp3" id="26_0c3t7"]
 [ext_resource type="Texture2D" uid="uid://cudp02cf1yw20" path="res://Sprites/piston_face.png" id="26_hcqfr"]
-[ext_resource type="AudioStream" uid="uid://5rjooss752lo" path="res://Audio/Low performance Alarm.mp3" id="26_hxaxn"]
+[ext_resource type="AudioStream" uid="uid://gxn3kar4ypkm" path="res://Audio/Wrong Stinger.mp3" id="27_ibv4f"]
 [ext_resource type="Texture2D" uid="uid://dlsum3henwgrk" path="res://Sprites/blender_sprites.png" id="30_7yuy5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6pig5"]
@@ -9295,8 +9296,8 @@ animal_sfx = Dictionary[String, AudioStream]({
 "worm": ExtResource("22_5tf44")
 })
 stinger_sfx = Dictionary[String, AudioStream]({
-"accept": ExtResource("26_hxaxn"),
-"reject": ExtResource("26_hxaxn")
+"accept": ExtResource("26_0c3t7"),
+"reject": ExtResource("27_ibv4f")
 })
 
 [node name="Pusher" type="Sprite2D" parent="." unique_id=903918988 groups=["pusher"]]

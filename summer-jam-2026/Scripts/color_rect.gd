@@ -7,7 +7,7 @@ func trigger_red_flash():
 	material.set_shader_parameter("flash_amount", 1.0)
 	
 	# Wait for 1 second
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	
 	# Turn it off
 	material.set_shader_parameter("flash_amount", 0.0)
