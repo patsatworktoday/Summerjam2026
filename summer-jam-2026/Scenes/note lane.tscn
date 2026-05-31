@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://dxochiemmusyd"]
 
 [ext_resource type="Script" uid="uid://bm2rrreuaixnp" path="res://Scenes/note_lane.gd" id="1_m21ut"]
-[ext_resource type="Texture2D" uid="uid://dns0fxs1fn3h0" path="res://rhythm-bg.png" id="2_6xfaf"]
-[ext_resource type="PackedScene" uid="uid://drluqvdaveb5g" path="res://Scenes/Chart.tscn" id="2_r0qes"]
+[ext_resource type="Texture2D" uid="uid://d375jgk0ghwxp" path="res://Sprites/game_jamr_rhythm_bg.png" id="2_7fy6g"]
 [ext_resource type="AudioStream" uid="uid://c6q8o4afvifex" path="res://Audio/High A.mp3" id="3_el3rr"]
 [ext_resource type="AudioStream" uid="uid://dt4ucdmn55j78" path="res://Audio/High Mid F#.mp3" id="4_xssb0"]
 [ext_resource type="AudioStream" uid="uid://c78q7p60b0lf0" path="res://Audio/Low mid D.mp3" id="5_7fy6g"]
 [ext_resource type="AudioStream" uid="uid://c02jo0wgqgfbu" path="res://Audio/Low B.mp3" id="6_cmwfn"]
+[ext_resource type="PackedScene" uid="uid://b6a21uh8q3j5" path="res://SavedChart.tscn" id="7_el3rr"]
+[ext_resource type="AudioStream" uid="uid://b6hefid5uppk1" path="res://Audio/Smart Casual Game Track.mp3" id="8_xssb0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0qes"]
 size = Vector2(20, 10)
@@ -14,7 +15,7 @@ size = Vector2(20, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xfaf"]
 size = Vector2(92, 20)
 
-[node name="NoteLane" type="Node2D" unique_id=1457790323 node_paths=PackedStringArray("lanes", "laneKeyMap", "laneAudioMap", "blank", "chart")]
+[node name="NoteLane" type="Node2D" unique_id=1457790323 node_paths=PackedStringArray("lanes", "laneKeyMap", "laneAudioMap", "blank", "chart", "musicPlayer")]
 script = ExtResource("1_m21ut")
 lanes = [NodePath("Lane"), NodePath("Lane2"), NodePath("Lane3"), NodePath("Lane4")]
 laneKeyMap = {
@@ -32,11 +33,12 @@ laneAudioMap = {
 blank = NodePath("Blank")
 chart = NodePath("Chart")
 chartSpeed = 64.0
+musicPlayer = NodePath("MusicPlayer")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=505643737]
-position = Vector2(35, -69)
-scale = Vector2(0.291, 0.291)
-texture = ExtResource("2_6xfaf")
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1947026915]
+position = Vector2(35, -76)
+scale = Vector2(0.08645178, 0.095279954)
+texture = ExtResource("2_7fy6g")
 
 [node name="Lane" type="Area2D" parent="." unique_id=1481782904]
 
@@ -73,9 +75,6 @@ shape = SubResource("RectangleShape2D_r0qes")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lane4" unique_id=1808411092]
 stream = ExtResource("6_cmwfn")
 
-[node name="Chart" parent="." unique_id=1895716848 instance=ExtResource("2_r0qes")]
-position = Vector2(0, 300)
-
 [node name="MissZone" type="Area2D" parent="." unique_id=602177285]
 position = Vector2(36, 41)
 
@@ -89,6 +88,11 @@ position = Vector2(-24, 0)
 position = Vector2(36, -132)
 zoom = Vector2(2.2, 2.2)
 
+[node name="Chart" parent="." unique_id=1927917994 instance=ExtResource("7_el3rr")]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=246650031]
+stream = ExtResource("8_xssb0")
+
 [connection signal="area_entered" from="Lane" to="." method="_on_note_area_entered" flags=18]
 [connection signal="area_exited" from="Lane" to="." method="_on_note_area_exited" flags=18]
 [connection signal="area_entered" from="Lane2" to="." method="_on_note_area_entered" flags=18]
@@ -98,3 +102,4 @@ zoom = Vector2(2.2, 2.2)
 [connection signal="area_entered" from="Lane4" to="." method="_on_note_area_entered" flags=18]
 [connection signal="area_exited" from="Lane4" to="." method="_on_note_area_exited" flags=18]
 [connection signal="area_entered" from="MissZone" to="." method="_on_miss_zone_entered"]
+[connection signal="finished" from="MusicPlayer" to="." method="end_chart"]
