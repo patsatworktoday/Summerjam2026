@@ -45,6 +45,7 @@ func select_new_attire() -> String:
 func play_animations(animal:String,clothes:String):
 	#set the animations to play
 	pusher.scale = pusher_scale
+	animated_sprite.animal_string = animal
 	animated_sprite.idle_string = animal+"_idle"
 	animated_sprite.die_string = animal+"_die"
 	if clothes != "none":

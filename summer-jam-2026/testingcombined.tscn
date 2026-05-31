@@ -41,6 +41,7 @@ rotation = 0.064904414
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer2" unique_id=1965240930]
 handle_input_locally = false
+audio_listener_enable_2d = true
 size = Vector2i(624, 419)
 render_target_update_mode = 4
 

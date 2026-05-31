@@ -1,6 +1,7 @@
 extends AnimatedSprite2D
 
 @export var movement_speed:float = 100
+@export var animal_sfx:Dictionary[String,AudioStream]
 var will_live:bool 
 var falling:bool
 var has_child:bool
@@ -8,6 +9,9 @@ var init_scale:Vector2
 var init_pusher_scale:Vector2
 var idle_string:String = "sheep_idle"
 var die_string = "sheep_die"
+var animal_string:String = "sheep"
+var animal_frames:Dictionary[String,int] = {"worm":5,"sheep":5,"raven":5,"sloth":5,"slug":5,"penguin":5,"priest":65}
+
 
 
 signal get_new_animal
@@ -29,9 +33,7 @@ func _ready() -> void:
 	init_pusher_scale = pusher.scale
 	falling = false
 	has_child = false
-
-	
-	pass # Replace with function body.
+	#_remove_animal()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -88,4 +90,17 @@ func animal_lived():
 func _remove_animal():
 	get_new_animal.emit()
 	
+func _play_animal_sfx(animal:String):
+	if not Animal_Audio.is_playing():
+		Animal_Audio.stream = animal_sfx[animal]
+		Animal_Audio.play()
 	
+	#for each animal i need a sfx and a frame number
+	#I want to play audio on that frame
+	
+	pass
+
+
+func _on_frame_changed() -> void:
+	if frame == animal_frames[animal_string]:
+		_play_animal_sfx(animal_string)
