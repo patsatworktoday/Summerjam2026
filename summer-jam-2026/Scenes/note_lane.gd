@@ -43,9 +43,11 @@ func _process(delta: float) -> void:
 				chart.disable_note(note)
 				hits += 1
 				print("hits: {0}".format([hits]))
+				update_score()
 			else:
 				misses += 1
 				print("misses: {0}".format([misses]))
+				update_score()
 	
 	chart.transform.origin.y += delta * chartSpeed
 
@@ -64,7 +66,11 @@ func _on_miss_zone_entered(note: Area2D) -> void:
 	chart.disable_note(note)
 	misses += 1
 	print("misses: {0}".format([misses]))
+	update_score()
 
 func end_chart():
 	print("ending game")
 	end_game.emit()
+	
+func update_score():
+	SystemGlobal.note_score = hits / (hits + misses)
