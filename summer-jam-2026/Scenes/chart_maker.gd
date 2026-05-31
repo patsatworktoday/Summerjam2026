@@ -2,6 +2,8 @@ extends Node2D
 
 @export var player: AudioStreamPlayer
 @export var laneKeyMap: Dictionary[String, float]
+@export var laneAudioMap: Dictionary[String, AudioStreamPlayer]
+@export var laneSpriteMap: Dictionary[String, String]
 @export var chartSpeed: float
 @export var notePS: PackedScene
 @export var followCam: Camera2D
@@ -18,15 +20,17 @@ func _process(delta: float) -> void:
 		start_charting()
 	
 	if recording:
+		var dist = -(chartSpeed * player.get_playback_position())
+		followCam.transform.origin.y = dist
 		for action in laneKeyMap.keys():
 			if Input.is_action_just_pressed(action):
 				print("keypress for ", action)
-				var dist = -(chartSpeed * player.get_playback_position())
+				laneAudioMap.get(action).play()
 				var newNote: Area2D = notePS.instantiate()
 				chartParent.add_child(newNote)
 				newNote.owner = chartParent
+				newNote.get_child(1).set_animation(laneSpriteMap.get(action))
 				newNote.transform.origin = Vector2(laneKeyMap.get(action), dist)
-				followCam.transform.origin.y = dist
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		stop_charting()

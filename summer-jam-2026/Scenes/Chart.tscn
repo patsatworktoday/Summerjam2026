@@ -3,9 +3,8 @@
 [ext_resource type="Script" uid="uid://qsiuupbx5tmc" path="res://Scenes/chart.gd" id="1_a8a4l"]
 [ext_resource type="PackedScene" uid="uid://ytyt0yd65p14" path="res://Scenes/note.tscn" id="2_clpow"]
 
-[node name="Chart" type="Node2D" unique_id=1895716848 node_paths=PackedStringArray("notes")]
+[node name="Chart" type="Node2D" unique_id=1895716848]
 script = ExtResource("1_a8a4l")
-notes = [NodePath("Note"), NodePath("Note2"), NodePath("Note3"), NodePath("Note4")]
 
 [node name="Note" parent="." unique_id=225176391 instance=ExtResource("2_clpow")]
 

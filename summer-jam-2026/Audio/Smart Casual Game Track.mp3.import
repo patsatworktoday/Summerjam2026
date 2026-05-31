@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6hefid5uppk1"
+path="res://.godot/imported/Smart Casual Game Track.mp3-53787b4847c7770d43f350f31870c27f.mp3str"
+
+[deps]
+
+source_file="res://Audio/Smart Casual Game Track.mp3"
+dest_files=["res://.godot/imported/Smart Casual Game Track.mp3-53787b4847c7770d43f350f31870c27f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

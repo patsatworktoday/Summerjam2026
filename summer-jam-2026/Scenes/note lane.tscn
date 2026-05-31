@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://bm2rrreuaixnp" path="res://Scenes/note_lane.gd" id="1_m21ut"]
 [ext_resource type="Texture2D" uid="uid://dns0fxs1fn3h0" path="res://rhythm-bg.png" id="2_6xfaf"]
 [ext_resource type="PackedScene" uid="uid://drluqvdaveb5g" path="res://Scenes/Chart.tscn" id="2_r0qes"]
+[ext_resource type="AudioStream" uid="uid://c6q8o4afvifex" path="res://Audio/High A.mp3" id="3_el3rr"]
+[ext_resource type="AudioStream" uid="uid://dt4ucdmn55j78" path="res://Audio/High Mid F#.mp3" id="4_xssb0"]
+[ext_resource type="AudioStream" uid="uid://c78q7p60b0lf0" path="res://Audio/Low mid D.mp3" id="5_7fy6g"]
+[ext_resource type="AudioStream" uid="uid://c02jo0wgqgfbu" path="res://Audio/Low B.mp3" id="6_cmwfn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0qes"]
 size = Vector2(20, 10)
@@ -10,7 +14,7 @@ size = Vector2(20, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xfaf"]
 size = Vector2(92, 20)
 
-[node name="NoteLane" type="Node2D" unique_id=1457790323 node_paths=PackedStringArray("lanes", "laneKeyMap", "blank", "chart")]
+[node name="NoteLane" type="Node2D" unique_id=1457790323 node_paths=PackedStringArray("lanes", "laneKeyMap", "laneAudioMap", "blank", "chart")]
 script = ExtResource("1_m21ut")
 lanes = [NodePath("Lane"), NodePath("Lane2"), NodePath("Lane3"), NodePath("Lane4")]
 laneKeyMap = {
@@ -18,6 +22,12 @@ laneKeyMap = {
 "ui_left": NodePath("Lane"),
 "ui_right": NodePath("Lane4"),
 "ui_up": NodePath("Lane2")
+}
+laneAudioMap = {
+"ui_down": NodePath("Lane3/AudioStreamPlayer"),
+"ui_left": NodePath("Lane/AudioStreamPlayer"),
+"ui_right": NodePath("Lane4/AudioStreamPlayer"),
+"ui_up": NodePath("Lane2/AudioStreamPlayer")
 }
 blank = NodePath("Blank")
 chart = NodePath("Chart")
@@ -33,11 +43,17 @@ texture = ExtResource("2_6xfaf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lane" unique_id=2058407836]
 shape = SubResource("RectangleShape2D_r0qes")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lane" unique_id=421011090]
+stream = ExtResource("3_el3rr")
+
 [node name="Lane2" type="Area2D" parent="." unique_id=1098362767]
 position = Vector2(24, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lane2" unique_id=2092349597]
 shape = SubResource("RectangleShape2D_r0qes")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lane2" unique_id=1839906518]
+stream = ExtResource("4_xssb0")
 
 [node name="Lane3" type="Area2D" parent="." unique_id=836934103]
 position = Vector2(48, 0)
@@ -45,11 +61,17 @@ position = Vector2(48, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lane3" unique_id=1114633937]
 shape = SubResource("RectangleShape2D_r0qes")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lane3" unique_id=919875962]
+stream = ExtResource("5_7fy6g")
+
 [node name="Lane4" type="Area2D" parent="." unique_id=327710184]
 position = Vector2(72, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lane4" unique_id=1659804406]
 shape = SubResource("RectangleShape2D_r0qes")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lane4" unique_id=1808411092]
+stream = ExtResource("6_cmwfn")
 
 [node name="Chart" parent="." unique_id=1895716848 instance=ExtResource("2_r0qes")]
 position = Vector2(0, 300)

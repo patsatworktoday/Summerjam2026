@@ -3,6 +3,7 @@ extends Node2D
 @export_category("Lane Settings")
 @export var lanes: Array[Area2D]
 @export var laneKeyMap: Dictionary[String, Area2D]
+@export var laneAudioMap: Dictionary[String, AudioStreamPlayer]
 @export var blank: Area2D
 
 @export_category("Chart Settings")
@@ -28,11 +29,17 @@ func _process(delta: float) -> void:
 	for action in laneKeyMap.keys():
 		var lane: Area2D = laneKeyMap.get(action)
 		var note: Area2D = laneNotePresent.get(lane)
-		if Input.is_action_just_pressed(action) and note != blank:
-			print("note hit on {0}".format([lane.name]))
-			chart.disable_note(note)
-			hits += 1
-			print("hits: {0}".format([hits]))
+		if Input.is_action_just_pressed(action):
+			laneAudioMap.get(action).play()
+			if note != blank:
+				print("note hit on {0}".format([lane.name]))
+				chart.disable_note(note)
+				hits += 1
+				print("hits: {0}".format([hits]))
+			else:
+				print("no note present, missed!")
+				misses += 1
+				print("misses: {0}".format([misses]))
 	
 	chart.transform.origin.y += delta * chartSpeed
 	

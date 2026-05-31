@@ -1,0 +1,47 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/note.tscn" id="1_qblal"]
+
+[node name="Chart" type="Node2D" unique_id=1927917994]
+
+[node name="Note" type="Area2D" parent="." unique_id=225176391 instance=ExtResource("1_qblal")]
+position = Vector2(0, -202.92267)
+
+[node name="@Area2D@2" type="Area2D" parent="." unique_id=1708982886 instance=ExtResource("1_qblal")]
+position = Vector2(48, -232.61867)
+
+[node name="@Area2D@3" type="Area2D" parent="." unique_id=698048462 instance=ExtResource("1_qblal")]
+position = Vector2(72, -254.976)
+
+[node name="@Area2D@4" type="Area2D" parent="." unique_id=1968003918 instance=ExtResource("1_qblal")]
+position = Vector2(0, -269.14133)
+
+[node name="@Area2D@5" type="Area2D" parent="." unique_id=2013878082 instance=ExtResource("1_qblal")]
+position = Vector2(24, -303.95734)
+
+[node name="@Area2D@6" type="Area2D" parent="." unique_id=1640865586 instance=ExtResource("1_qblal")]
+position = Vector2(48, -318.12268)
+
+[node name="@Area2D@7" type="Area2D" parent="." unique_id=798012138 instance=ExtResource("1_qblal")]
+position = Vector2(72, -331.43466)
+
+[node name="@Area2D@8" type="Area2D" parent="." unique_id=1539704600 instance=ExtResource("1_qblal")]
+position = Vector2(72, -333.65332)
+
+[node name="@Area2D@9" type="Area2D" parent="." unique_id=133147808 instance=ExtResource("1_qblal")]
+position = Vector2(0, -347.81866)
+
+[node name="@Area2D@10" type="Area2D" parent="." unique_id=2098662509 instance=ExtResource("1_qblal")]
+position = Vector2(24, -390.144)
+
+[node name="@Area2D@11" type="Area2D" parent="." unique_id=1005999208 instance=ExtResource("1_qblal")]
+position = Vector2(48, -397.65332)
+
+[node name="@Area2D@12" type="Area2D" parent="." unique_id=854288682 instance=ExtResource("1_qblal")]
+position = Vector2(48, -439.296)
+
+[node name="@Area2D@13" type="Area2D" parent="." unique_id=42216881 instance=ExtResource("1_qblal")]
+position = Vector2(72, -468.992)
+
+[node name="@Area2D@14" type="Area2D" parent="." unique_id=1293035040 instance=ExtResource("1_qblal")]
+position = Vector2(72, -480.08533)
