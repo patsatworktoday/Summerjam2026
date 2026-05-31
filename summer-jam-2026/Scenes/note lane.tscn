@@ -84,10 +84,6 @@ shape = SubResource("RectangleShape2D_6xfaf")
 [node name="Blank" type="Area2D" parent="." unique_id=990134028]
 position = Vector2(-24, 0)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1431450383]
-position = Vector2(36, -132)
-zoom = Vector2(2.2, 2.2)
-
 [node name="Chart" parent="." unique_id=1927917994 instance=ExtResource("7_el3rr")]
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=246650031]

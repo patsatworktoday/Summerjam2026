@@ -33,27 +33,36 @@ position = Vector2(583, 324.00003)
 scale = Vector2(0.622, 0.692)
 texture = ExtResource("3_e56ig")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=2097176597]
-offset_left = 65.0
-offset_top = 172.99998
-offset_right = 351.0
-offset_bottom = 642.0
-rotation = -0.18675023
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1238765347]
+offset_left = 75.999985
+offset_top = 166.0
+offset_right = 330.0
+offset_bottom = 624.0
+rotation = -0.14461671
+stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=471684347]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=824090718]
 handle_input_locally = false
 audio_listener_enable_2d = true
 audio_listener_enable_3d = true
-size = Vector2i(262, 463)
+size = Vector2i(254, 458)
+size_2d_override_stretch = true
 render_target_update_mode = 4
 
-[node name="NoteLane" parent="SubViewportContainer/SubViewport" unique_id=1457790323 node_paths=PackedStringArray("laneKeyMap") instance=ExtResource("4_qnk8i")]
-position = Vector2(153, 327)
+[node name="NoteLane" parent="SubViewportContainer/SubViewport" unique_id=1457790323 node_paths=PackedStringArray("laneKeyMap", "laneAudioMap") instance=ExtResource("4_qnk8i")]
+position = Vector2(34.595253, 435.53204)
+scale = Vector2(2.65, 2.65)
 laneKeyMap = {
 "ui_down": NodePath("Lane3"),
 "ui_left": NodePath("Lane"),
 "ui_right": NodePath("Lane4"),
 "ui_up": NodePath("Lane2")
+}
+laneAudioMap = {
+"ui_down": NodePath("Lane3/AudioStreamPlayer"),
+"ui_left": NodePath("Lane/AudioStreamPlayer"),
+"ui_right": NodePath("Lane4/AudioStreamPlayer"),
+"ui_up": NodePath("Lane2/AudioStreamPlayer")
 }
 
 [node name="hand" type="Sprite2D" parent="." unique_id=529885461]
@@ -62,7 +71,7 @@ scale = Vector2(0.51, 0.567)
 texture = ExtResource("5_pyioa")
 
 [node name="thumb" type="Sprite2D" parent="." unique_id=1842774848]
-position = Vector2(578.6, 328.18)
+position = Vector2(570, 340)
 scale = Vector2(0.51, 0.567)
 texture = ExtResource("6_uwy3p")
 
