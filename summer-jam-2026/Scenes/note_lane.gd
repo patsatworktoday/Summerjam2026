@@ -41,6 +41,7 @@ func _process(delta: float) -> void:
 			laneAudioMap.get(action).play()
 			if note != blank:
 				chart.disable_note(note)
+				note.get_child(1).play("green")
 				hits += 1
 				print("hits: {0}".format([hits]))
 				update_score()
