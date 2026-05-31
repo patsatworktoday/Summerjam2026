@@ -11,20 +11,25 @@ var idle_string:String = "sheep_idle"
 var die_string = "sheep_die"
 var animal_string:String = "sheep"
 var animal_frames:Dictionary[String,int] = {"worm":5,"sheep":5,"raven":5,"sloth":5,"slug":5,"penguin":5,"priest":65}
-
-
+@export var reject_clothes:Array[String] = ["monocle","sunglasses"]
+@export var accept_clothes:Array[String] = ["none"]
+var animal_score:int
+var clothes_string:String
 
 signal get_new_animal
 signal blood_spatter
 
 
 @onready var exit_point:Sprite2D = get_tree().get_first_node_in_group("Exit")
-@onready var mulcher:Sprite2D = get_tree().get_first_node_in_group("mulcher")
+@onready var mulcher:AnimatedSprite2D = get_tree().get_first_node_in_group("mulcher")
 @onready var pusher:Sprite2D = get_tree().get_first_node_in_group("pusher")
+@onready var score_label:Label = get_tree().get_first_node_in_group("ScoreLabel")
 @onready var Audio:AudioStreamPlayer2D = get_tree().get_first_node_in_group("Audio")
 @onready var Animal_Audio:AudioStreamPlayer2D = get_tree().get_first_node_in_group("Animal_Audio")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	animal_score = 0
+	clothes_string = "sunglasses"
 	sprite_frames = sprite_frames.duplicate(true)
 	self.visible = true
 	play(idle_string)
@@ -33,6 +38,7 @@ func _ready() -> void:
 	init_pusher_scale = pusher.scale
 	falling = false
 	has_child = false
+	score_label.text = "Score: 0"
 	#_remove_animal()
 
 
@@ -40,12 +46,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if will_live == true:
 		self.global_position.x += movement_speed*delta
-	elif self.global_position.x != mulcher.global_position.x:
-		if self.global_position.x > mulcher.global_position.x:
+	elif self.global_position.x != mulcher.global_position.x-50:
+		if self.global_position.x > mulcher.global_position.x-50:
 			self.global_position.x -= movement_speed*delta
 			self.scale = self.scale * (1+(1 * delta))
 			pusher.scale = pusher.scale * (1+(1 * delta))
-		elif self.global_position.x < mulcher.global_position.x:
+		elif self.global_position.x < mulcher.global_position.x-50:
 			self.global_position.x += movement_speed*delta
 			self.scale = self.scale * (1+(1 * delta))
 			pusher.scale = pusher.scale * (1+(1 * delta))
@@ -61,13 +67,17 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Reject_Animal"):
 		if will_live == true:
+			print_debug(clothes_string)
+			if clothes_string in reject_clothes:
+				increment_score()
 			play(die_string)
 			will_live = false
 			Audio.play_track(0)
-			
+			#_play_animal_sfx("falling")
 			await self.animation_finished
 			Audio.play_track(1)
 			blood_spatter.emit()
+			
 			falling = true
 			
 	
@@ -85,6 +95,8 @@ func _process(delta: float) -> void:
 	
 	
 func animal_lived():
+	if clothes_string in accept_clothes:
+		increment_score()
 	_remove_animal()
 
 func _remove_animal():
@@ -95,11 +107,9 @@ func _play_animal_sfx(animal:String):
 		Animal_Audio.stream = animal_sfx[animal]
 		Animal_Audio.play()
 	
-	#for each animal i need a sfx and a frame number
-	#I want to play audio on that frame
-	
-	pass
-
+func increment_score():
+	animal_score += 1
+	score_label.text = "Score: " + str(animal_score)
 
 func _on_frame_changed() -> void:
 	if frame == animal_frames[animal_string]:

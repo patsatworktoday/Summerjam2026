@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://du0v5iscjhtmi"
+path="res://.godot/imported/Penguin SFX.mp3-910f2c5320109791eecea67c269af445.mp3str"
+
+[deps]
+
+source_file="res://Audio/Penguin SFX.mp3"
+dest_files=["res://.godot/imported/Penguin SFX.mp3-910f2c5320109791eecea67c269af445.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
