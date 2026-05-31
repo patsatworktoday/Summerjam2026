@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c78q7p60b0lf0"
+path="res://.godot/imported/Low mid D.mp3-ab65d16fcdd5f2f35c27a1c103f57f5b.mp3str"
+
+[deps]
+
+source_file="res://Audio/Low mid D.mp3"
+dest_files=["res://.godot/imported/Low mid D.mp3-ab65d16fcdd5f2f35c27a1c103f57f5b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cbfdsuyxqkn2v"]
+
+[ext_resource type="Script" uid="uid://b3hberwf52tgr" path="res://Scenes/chart_maker.gd" id="1_plrkf"]
+[ext_resource type="PackedScene" uid="uid://ytyt0yd65p14" path="res://Scenes/note.tscn" id="2_o5nhv"]
+[ext_resource type="AudioStream" uid="uid://b6hefid5uppk1" path="res://Audio/Smart Casual Game Track.mp3" id="2_vubp6"]
+[ext_resource type="AudioStream" uid="uid://c6q8o4afvifex" path="res://Audio/High A.mp3" id="4_af8d5"]
+[ext_resource type="AudioStream" uid="uid://dt4ucdmn55j78" path="res://Audio/High Mid F#.mp3" id="5_71avw"]
+[ext_resource type="AudioStream" uid="uid://c78q7p60b0lf0" path="res://Audio/Low mid D.mp3" id="6_k5xw6"]
+[ext_resource type="AudioStream" uid="uid://c02jo0wgqgfbu" path="res://Audio/Low B.mp3" id="7_71avw"]
+
+[node name="ChartMaker" type="Node2D" unique_id=505478445 node_paths=PackedStringArray("player", "laneAudioMap", "followCam", "chartParent", "timeLabel")]
+script = ExtResource("1_plrkf")
+player = NodePath("AudioStreamPlayer")
+laneKeyMap = Dictionary[String, float]({
+"ui_down": 48.0,
+"ui_left": 0.0,
+"ui_right": 72.0,
+"ui_up": 24.0
+})
+laneAudioMap = {
+"ui_down": NodePath("AudioStreamPlayerLane3"),
+"ui_left": NodePath("AudioStreamPlayerLane"),
+"ui_right": NodePath("AudioStreamPlayerLane4"),
+"ui_up": NodePath("AudioStreamPlayerLane2")
+}
+laneSpriteMap = Dictionary[String, String]({
+"ui_down": "orange",
+"ui_left": "default",
+"ui_right": "red",
+"ui_up": "green"
+})
+chartSpeed = 64.0
+notePS = ExtResource("2_o5nhv")
+followCam = NodePath("Camera2D")
+chartParent = NodePath("Chart")
+timeLabel = NodePath("Camera2D/Control/Label")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=727067943]
+stream = ExtResource("2_vubp6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2089727924]
+
+[node name="Control" type="Control" parent="Camera2D" unique_id=2118414176]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Camera2D/Control" unique_id=2055322331]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Chart" type="Node2D" parent="." unique_id=1927917994]
+
+[node name="AudioStreamPlayerLane" type="AudioStreamPlayer" parent="." unique_id=1565848564]
+stream = ExtResource("4_af8d5")
+
+[node name="AudioStreamPlayerLane2" type="AudioStreamPlayer" parent="." unique_id=2084496433]
+stream = ExtResource("5_71avw")
+
+[node name="AudioStreamPlayerLane3" type="AudioStreamPlayer" parent="." unique_id=999190739]
+stream = ExtResource("6_k5xw6")
+
+[node name="AudioStreamPlayerLane4" type="AudioStreamPlayer" parent="." unique_id=395556762]
+stream = ExtResource("7_71avw")

@@ -1,0 +1,776 @@
+[gd_scene format=3 uid="uid://b6a21uh8q3j5"]
+
+[ext_resource type="Script" uid="uid://qsiuupbx5tmc" path="res://Scenes/chart.gd" id="1_1jan0"]
+[ext_resource type="PackedScene" uid="uid://ytyt0yd65p14" path="res://Scenes/note.tscn" id="1_qblal"]
+
+[node name="Chart" type="Node2D" unique_id=1927917994 node_paths=PackedStringArray("notes")]
+script = ExtResource("1_1jan0")
+notes = [NodePath("Note"), NodePath("@Area2D@24"), NodePath("@Area2D@25"), NodePath("@Area2D@26"), NodePath("@Area2D@27"), NodePath("@Area2D@28"), NodePath("@Area2D@29"), NodePath("@Area2D@30"), NodePath("@Area2D@31"), NodePath("@Area2D@32"), NodePath("@Area2D@33"), NodePath("@Area2D@34"), NodePath("@Area2D@35"), NodePath("@Area2D@36"), NodePath("@Area2D@37"), NodePath("@Area2D@38"), NodePath("@Area2D@39"), NodePath("@Area2D@40"), NodePath("@Area2D@41"), NodePath("@Area2D@42"), NodePath("@Area2D@43"), NodePath("@Area2D@44"), NodePath("@Area2D@45"), NodePath("@Area2D@46"), NodePath("@Area2D@47"), NodePath("@Area2D@48"), NodePath("@Area2D@49"), NodePath("@Area2D@50"), NodePath("@Area2D@51"), NodePath("@Area2D@52"), NodePath("@Area2D@53"), NodePath("@Area2D@54"), NodePath("@Area2D@55"), NodePath("@Area2D@56"), NodePath("@Area2D@57"), NodePath("@Area2D@58"), NodePath("@Area2D@59"), NodePath("@Area2D@60"), NodePath("@Area2D@61"), NodePath("@Area2D@62"), NodePath("@Area2D@63"), NodePath("@Area2D@64"), NodePath("@Area2D@65"), NodePath("@Area2D@66"), NodePath("@Area2D@67"), NodePath("@Area2D@68"), NodePath("@Area2D@69"), NodePath("@Area2D@70"), NodePath("@Area2D@71"), NodePath("@Area2D@72"), NodePath("@Area2D@73"), NodePath("@Area2D@74"), NodePath("@Area2D@75"), NodePath("@Area2D@76"), NodePath("@Area2D@77"), NodePath("@Area2D@78"), NodePath("@Area2D@79"), NodePath("@Area2D@80"), NodePath("@Area2D@81"), NodePath("@Area2D@82"), NodePath("@Area2D@83"), NodePath("@Area2D@84"), NodePath("@Area2D@85"), NodePath("@Area2D@86"), NodePath("@Area2D@87"), NodePath("@Area2D@88"), NodePath("@Area2D@89"), NodePath("@Area2D@90"), NodePath("@Area2D@91"), NodePath("@Area2D@92"), NodePath("@Area2D@93"), NodePath("@Area2D@94"), NodePath("@Area2D@95"), NodePath("@Area2D@96"), NodePath("@Area2D@97"), NodePath("@Area2D@98"), NodePath("@Area2D@99"), NodePath("@Area2D@100"), NodePath("@Area2D@101"), NodePath("@Area2D@102"), NodePath("@Area2D@103"), NodePath("@Area2D@104"), NodePath("@Area2D@105"), NodePath("@Area2D@106"), NodePath("@Area2D@107"), NodePath("@Area2D@108"), NodePath("@Area2D@109"), NodePath("@Area2D@110"), NodePath("@Area2D@111"), NodePath("@Area2D@112"), NodePath("@Area2D@113"), NodePath("@Area2D@114"), NodePath("@Area2D@115"), NodePath("@Area2D@116"), NodePath("@Area2D@117"), NodePath("@Area2D@118"), NodePath("@Area2D@119"), NodePath("@Area2D@120"), NodePath("@Area2D@121"), NodePath("@Area2D@122"), NodePath("@Area2D@123"), NodePath("@Area2D@124"), NodePath("@Area2D@125"), NodePath("@Area2D@126"), NodePath("@Area2D@127"), NodePath("@Area2D@128"), NodePath("@Area2D@129"), NodePath("@Area2D@130"), NodePath("@Area2D@131"), NodePath("@Area2D@132"), NodePath("@Area2D@133"), NodePath("@Area2D@134"), NodePath("@Area2D@135"), NodePath("@Area2D@136"), NodePath("@Area2D@137"), NodePath("@Area2D@138"), NodePath("@Area2D@139"), NodePath("@Area2D@140"), NodePath("@Area2D@141"), NodePath("@Area2D@142"), NodePath("@Area2D@143"), NodePath("@Area2D@144"), NodePath("@Area2D@145"), NodePath("@Area2D@146"), NodePath("@Area2D@147"), NodePath("@Area2D@148"), NodePath("@Area2D@149"), NodePath("@Area2D@150"), NodePath("@Area2D@151"), NodePath("@Area2D@152"), NodePath("@Area2D@153"), NodePath("@Area2D@154"), NodePath("@Area2D@155"), NodePath("@Area2D@156"), NodePath("@Area2D@157"), NodePath("@Area2D@158"), NodePath("@Area2D@159"), NodePath("@Area2D@160"), NodePath("@Area2D@161"), NodePath("@Area2D@162"), NodePath("@Area2D@163"), NodePath("@Area2D@164"), NodePath("@Area2D@165"), NodePath("@Area2D@166"), NodePath("@Area2D@167"), NodePath("@Area2D@168"), NodePath("@Area2D@169"), NodePath("@Area2D@170"), NodePath("@Area2D@171"), NodePath("@Area2D@172"), NodePath("@Area2D@173"), NodePath("@Area2D@174"), NodePath("@Area2D@175"), NodePath("@Area2D@176"), NodePath("@Area2D@177"), NodePath("@Area2D@178"), NodePath("@Area2D@179"), NodePath("@Area2D@180"), NodePath("@Area2D@181"), NodePath("@Area2D@182"), NodePath("@Area2D@183"), NodePath("@Area2D@184"), NodePath("@Area2D@185"), NodePath("@Area2D@186"), NodePath("@Area2D@187"), NodePath("@Area2D@188"), NodePath("@Area2D@189"), NodePath("@Area2D@190"), NodePath("@Area2D@191"), NodePath("@Area2D@192"), NodePath("@Area2D@193"), NodePath("@Area2D@194"), NodePath("@Area2D@195"), NodePath("@Area2D@196"), NodePath("@Area2D@197"), NodePath("@Area2D@198"), NodePath("@Area2D@199"), NodePath("@Area2D@200"), NodePath("@Area2D@201"), NodePath("@Area2D@202"), NodePath("@Area2D@203"), NodePath("@Area2D@205"), NodePath("@Area2D@206"), NodePath("@Area2D@207"), NodePath("@Area2D@208"), NodePath("@Area2D@209"), NodePath("@Area2D@210"), NodePath("@Area2D@211"), NodePath("@Area2D@212"), NodePath("@Area2D@213"), NodePath("@Area2D@214"), NodePath("@Area2D@215"), NodePath("@Area2D@216"), NodePath("@Area2D@217"), NodePath("@Area2D@218"), NodePath("@Area2D@219"), NodePath("@Area2D@220"), NodePath("@Area2D@221"), NodePath("@Area2D@222"), NodePath("@Area2D@223"), NodePath("@Area2D@224"), NodePath("@Area2D@225"), NodePath("@Area2D@226"), NodePath("@Area2D@227"), NodePath("@Area2D@228"), NodePath("@Area2D@229"), NodePath("@Area2D@230"), NodePath("@Area2D@231"), NodePath("@Area2D@232"), NodePath("@Area2D@233"), NodePath("@Area2D@234"), NodePath("@Area2D@235"), NodePath("@Area2D@236"), NodePath("@Area2D@237"), NodePath("@Area2D@238"), NodePath("@Area2D@239"), NodePath("@Area2D@240"), NodePath("@Area2D@241"), NodePath("@Area2D@242"), NodePath("@Area2D@243"), NodePath("@Area2D@244"), NodePath("@Area2D@245"), NodePath("@Area2D@246"), NodePath("@Area2D@247"), NodePath("@Area2D@248"), NodePath("@Area2D@249"), NodePath("@Area2D@250"), NodePath("@Area2D@251"), NodePath("@Area2D@252"), NodePath("@Area2D@253"), NodePath("@Area2D@254"), NodePath("@Area2D@255"), NodePath("@Area2D@256"), NodePath("@Area2D@257"), NodePath("@Area2D@258"), NodePath("@Area2D@259"), NodePath("@Area2D@260"), NodePath("@Area2D@261"), NodePath("@Area2D@262"), NodePath("@Area2D@263"), NodePath("@Area2D@264"), NodePath("@Area2D@265"), NodePath("@Area2D@266"), NodePath("@Area2D@267"), NodePath("@Area2D@268"), NodePath("@Area2D@269"), NodePath("@Area2D@270"), NodePath("@Area2D@271"), NodePath("@Area2D@272"), NodePath("@Area2D@273"), NodePath("@Area2D@274"), NodePath("@Area2D@275"), NodePath("@Area2D@276"), NodePath("@Area2D@277"), NodePath("@Area2D@278"), NodePath("@Area2D@279")]
+
+[node name="Note" parent="." unique_id=225176391 instance=ExtResource("1_qblal")]
+position = Vector2(24, -26.794666)
+
+[node name="@Area2D@24" parent="." unique_id=1448934771 instance=ExtResource("1_qblal")]
+position = Vector2(24, -126.464)
+
+[node name="@Area2D@25" parent="." unique_id=309200410 instance=ExtResource("1_qblal")]
+position = Vector2(48, -159.06134)
+
+[node name="@Area2D@26" parent="." unique_id=390485755 instance=ExtResource("1_qblal")]
+position = Vector2(24, -219.30667)
+
+[node name="@Area2D@27" parent="." unique_id=1490633100 instance=ExtResource("1_qblal")]
+position = Vector2(72, -286.208)
+
+[node name="@Area2D@28" parent="." unique_id=457580848 instance=ExtResource("1_qblal")]
+position = Vector2(0, -388.608)
+
+[node name="@Area2D@29" parent="." unique_id=1339640309 instance=ExtResource("1_qblal")]
+position = Vector2(48, -419.84)
+
+[node name="@Area2D@30" parent="." unique_id=285644998 instance=ExtResource("1_qblal")]
+position = Vector2(0, -465.23734)
+
+[node name="@Area2D@31" parent="." unique_id=1944760592 instance=ExtResource("1_qblal")]
+position = Vector2(0, -517.29065)
+
+[node name="@Area2D@32" parent="." unique_id=64192738 instance=ExtResource("1_qblal")]
+position = Vector2(24, -549.888)
+
+[node name="@Area2D@33" parent="." unique_id=415411236 instance=ExtResource("1_qblal")]
+position = Vector2(24, -638.29333)
+
+[node name="@Area2D@34" parent="." unique_id=405144214 instance=ExtResource("1_qblal")]
+position = Vector2(48, -676.18134)
+
+[node name="@Area2D@35" parent="." unique_id=1521734363 instance=ExtResource("1_qblal")]
+position = Vector2(24, -733.5253)
+
+[node name="@Area2D@36" parent="." unique_id=1474594329 instance=ExtResource("1_qblal")]
+position = Vector2(0, -807.08264)
+
+[node name="@Area2D@37" parent="." unique_id=2117371492 instance=ExtResource("1_qblal")]
+position = Vector2(48, -894.63464)
+
+[node name="@Area2D@38" parent="." unique_id=1257145590 instance=ExtResource("1_qblal")]
+position = Vector2(0, -924.50134)
+
+[node name="@Area2D@39" parent="." unique_id=1389840393 instance=ExtResource("1_qblal")]
+position = Vector2(48, -1001.64264)
+
+[node name="@Area2D@40" parent="." unique_id=1786563201 instance=ExtResource("1_qblal")]
+position = Vector2(48, -1043.2853)
+
+[node name="@Area2D@41" parent="." unique_id=998432160 instance=ExtResource("1_qblal")]
+position = Vector2(24, -1081.856)
+
+[node name="@Area2D@42" parent="." unique_id=582671145 instance=ExtResource("1_qblal")]
+position = Vector2(72, -1187.4987)
+
+[node name="@Area2D@43" parent="." unique_id=1670632332 instance=ExtResource("1_qblal")]
+position = Vector2(0, -1255.7654)
+
+[node name="@Area2D@44" parent="." unique_id=606551548 instance=ExtResource("1_qblal")]
+position = Vector2(48, -1310.72)
+
+[node name="@Area2D@45" parent="." unique_id=307230747 instance=ExtResource("1_qblal")]
+position = Vector2(0, -1394.688)
+
+[node name="@Area2D@46" parent="." unique_id=1257150607 instance=ExtResource("1_qblal")]
+position = Vector2(48, -1431.8933)
+
+[node name="@Area2D@47" parent="." unique_id=571819395 instance=ExtResource("1_qblal")]
+position = Vector2(0, -1493.504)
+
+[node name="@Area2D@48" parent="." unique_id=838215516 instance=ExtResource("1_qblal")]
+position = Vector2(72, -1551.1893)
+
+[node name="@Area2D@49" parent="." unique_id=1571673477 instance=ExtResource("1_qblal")]
+position = Vector2(24, -1589.4187)
+
+[node name="@Area2D@50" parent="." unique_id=125836361 instance=ExtResource("1_qblal")]
+position = Vector2(0, -1657.856)
+
+[node name="@Area2D@51" parent="." unique_id=707124310 instance=ExtResource("1_qblal")]
+position = Vector2(48, -1697.1094)
+
+[node name="@Area2D@52" parent="." unique_id=690984359 instance=ExtResource("1_qblal")]
+position = Vector2(24, -1764.0106)
+
+[node name="@Area2D@53" parent="." unique_id=1431886891 instance=ExtResource("1_qblal")]
+position = Vector2(0, -1826.304)
+
+[node name="@Area2D@54" parent="." unique_id=1847213322 instance=ExtResource("1_qblal")]
+position = Vector2(72, -1914.1974)
+
+[node name="@Area2D@55" parent="." unique_id=521995913 instance=ExtResource("1_qblal")]
+position = Vector2(0, -1947.648)
+
+[node name="@Area2D@56" parent="." unique_id=1776281906 instance=ExtResource("1_qblal")]
+position = Vector2(48, -2016.5973)
+
+[node name="@Area2D@57" parent="." unique_id=715425334 instance=ExtResource("1_qblal")]
+position = Vector2(48, -2048.6826)
+
+[node name="@Area2D@58" parent="." unique_id=1939852368 instance=ExtResource("1_qblal")]
+position = Vector2(0, -2085.0347)
+
+[node name="@Area2D@59" parent="." unique_id=1205856413 instance=ExtResource("1_qblal")]
+position = Vector2(24, -2194.2612)
+
+[node name="@Area2D@60" parent="." unique_id=892829692 instance=ExtResource("1_qblal")]
+position = Vector2(72, -2270.72)
+
+[node name="@Area2D@61" parent="." unique_id=272847898 instance=ExtResource("1_qblal")]
+position = Vector2(0, -2333.8667)
+
+[node name="@Area2D@62" parent="." unique_id=2060506617 instance=ExtResource("1_qblal")]
+position = Vector2(72, -2425.344)
+
+[node name="@Area2D@63" parent="." unique_id=96391774 instance=ExtResource("1_qblal")]
+position = Vector2(48, -2459.4773)
+
+[node name="@Area2D@64" parent="." unique_id=533379268 instance=ExtResource("1_qblal")]
+position = Vector2(24, -2518.1868)
+
+[node name="@Area2D@65" parent="." unique_id=1249224460 instance=ExtResource("1_qblal")]
+position = Vector2(72, -2593.28)
+
+[node name="@Area2D@66" parent="." unique_id=834321767 instance=ExtResource("1_qblal")]
+position = Vector2(0, -2685.44)
+
+[node name="@Area2D@67" parent="." unique_id=792255024 instance=ExtResource("1_qblal")]
+position = Vector2(24, -2726.2292)
+
+[node name="@Area2D@68" parent="." unique_id=1057375853 instance=ExtResource("1_qblal")]
+position = Vector2(48, -2785.792)
+
+[node name="@Area2D@69" parent="." unique_id=1393967349 instance=ExtResource("1_qblal")]
+position = Vector2(0, -2844.3306)
+
+[node name="@Area2D@70" parent="." unique_id=691867194 instance=ExtResource("1_qblal")]
+position = Vector2(24, -2941.7813)
+
+[node name="@Area2D@71" parent="." unique_id=494758485 instance=ExtResource("1_qblal")]
+position = Vector2(24, -2981.2053)
+
+[node name="@Area2D@72" parent="." unique_id=56286946 instance=ExtResource("1_qblal")]
+position = Vector2(48, -3045.0347)
+
+[node name="@Area2D@73" parent="." unique_id=1424925370 instance=ExtResource("1_qblal")]
+position = Vector2(0, -3105.28)
+
+[node name="@Area2D@74" parent="." unique_id=1308210866 instance=ExtResource("1_qblal")]
+position = Vector2(24, -3231.5732)
+
+[node name="@Area2D@75" parent="." unique_id=596701994 instance=ExtResource("1_qblal")]
+position = Vector2(72, -3283.456)
+
+[node name="@Area2D@76" parent="." unique_id=1379785579 instance=ExtResource("1_qblal")]
+position = Vector2(0, -3328.8533)
+
+[node name="@Area2D@77" parent="." unique_id=1111801959 instance=ExtResource("1_qblal")]
+position = Vector2(48, -3357.8667)
+
+[node name="@Area2D@78" parent="." unique_id=442472400 instance=ExtResource("1_qblal")]
+position = Vector2(0, -3458.9014)
+
+[node name="@Area2D@79" parent="." unique_id=1090712486 instance=ExtResource("1_qblal")]
+position = Vector2(48, -3490.1333)
+
+[node name="@Area2D@80" parent="." unique_id=1765777424 instance=ExtResource("1_qblal")]
+position = Vector2(24, -3536.2134)
+
+[node name="@Area2D@81" parent="." unique_id=1503084606 instance=ExtResource("1_qblal")]
+position = Vector2(72, -3583.6587)
+
+[node name="@Area2D@82" parent="." unique_id=371204133 instance=ExtResource("1_qblal")]
+position = Vector2(0, -3615.744)
+
+[node name="@Area2D@83" parent="." unique_id=1943673520 instance=ExtResource("1_qblal")]
+position = Vector2(24, -3731.6267)
+
+[node name="@Area2D@84" parent="." unique_id=1771015284 instance=ExtResource("1_qblal")]
+position = Vector2(0, -3794.7734)
+
+[node name="@Area2D@85" parent="." unique_id=278704158 instance=ExtResource("1_qblal")]
+position = Vector2(48, -3877.888)
+
+[node name="@Area2D@86" parent="." unique_id=1389256395 instance=ExtResource("1_qblal")]
+position = Vector2(72, -3971.584)
+
+[node name="@Area2D@87" parent="." unique_id=791529716 instance=ExtResource("1_qblal")]
+position = Vector2(0, -4002.1333)
+
+[node name="@Area2D@88" parent="." unique_id=1098294696 instance=ExtResource("1_qblal")]
+position = Vector2(48, -4054.8694)
+
+[node name="@Area2D@89" parent="." unique_id=495112590 instance=ExtResource("1_qblal")]
+position = Vector2(48, -4100.096)
+
+[node name="@Area2D@90" parent="." unique_id=280664617 instance=ExtResource("1_qblal")]
+position = Vector2(0, -4137.3013)
+
+[node name="@Area2D@91" parent="." unique_id=906094893 instance=ExtResource("1_qblal")]
+position = Vector2(72, -4259.84)
+
+[node name="@Area2D@92" parent="." unique_id=1169769706 instance=ExtResource("1_qblal")]
+position = Vector2(0, -4318.5493)
+
+[node name="@Area2D@93" parent="." unique_id=557124073 instance=ExtResource("1_qblal")]
+position = Vector2(24, -4381.013)
+
+[node name="@Area2D@94" parent="." unique_id=199069235 instance=ExtResource("1_qblal")]
+position = Vector2(48, -4427.0933)
+
+[node name="@Area2D@95" parent="." unique_id=284318267 instance=ExtResource("1_qblal")]
+position = Vector2(24, -4568.9175)
+
+[node name="@Area2D@96" parent="." unique_id=1475146179 instance=ExtResource("1_qblal")]
+position = Vector2(48, -4589.739)
+
+[node name="@Area2D@97" parent="." unique_id=1631148507 instance=ExtResource("1_qblal")]
+position = Vector2(72, -4632.9175)
+
+[node name="@Area2D@98" parent="." unique_id=994170741 instance=ExtResource("1_qblal")]
+position = Vector2(0, -4687.872)
+
+[node name="@Area2D@99" parent="." unique_id=1106046326 instance=ExtResource("1_qblal")]
+position = Vector2(48, -4736.8535)
+
+[node name="@Area2D@100" parent="." unique_id=649908189 instance=ExtResource("1_qblal")]
+position = Vector2(0, -4827.4775)
+
+[node name="@Area2D@101" parent="." unique_id=1851139334 instance=ExtResource("1_qblal")]
+position = Vector2(48, -4843.1787)
+
+[node name="@Area2D@102" parent="." unique_id=656426037 instance=ExtResource("1_qblal")]
+position = Vector2(24, -4892.16)
+
+[node name="@Area2D@103" parent="." unique_id=1908820028 instance=ExtResource("1_qblal")]
+position = Vector2(24, -5019.9893)
+
+[node name="@Area2D@104" parent="." unique_id=1806444213 instance=ExtResource("1_qblal")]
+position = Vector2(48, -5054.1226)
+
+[node name="@Area2D@105" parent="." unique_id=1757155862 instance=ExtResource("1_qblal")]
+position = Vector2(72, -5085.3545)
+
+[node name="@Area2D@106" parent="." unique_id=1875159577 instance=ExtResource("1_qblal")]
+position = Vector2(48, -5126.3145)
+
+[node name="@Area2D@107" parent="." unique_id=987671364 instance=ExtResource("1_qblal")]
+position = Vector2(24, -5127.68)
+
+[node name="@Area2D@108" parent="." unique_id=1078212568 instance=ExtResource("1_qblal")]
+position = Vector2(48, -5275.648)
+
+[node name="@Area2D@109" parent="." unique_id=264194343 instance=ExtResource("1_qblal")]
+position = Vector2(24, -5295.616)
+
+[node name="@Area2D@110" parent="." unique_id=990471062 instance=ExtResource("1_qblal")]
+position = Vector2(0, -5332.1387)
+
+[node name="@Area2D@111" parent="." unique_id=1223746484 instance=ExtResource("1_qblal")]
+position = Vector2(72, -5374.464)
+
+[node name="@Area2D@112" parent="." unique_id=683662207 instance=ExtResource("1_qblal")]
+position = Vector2(24, -5401.259)
+
+[node name="@Area2D@113" parent="." unique_id=411279441 instance=ExtResource("1_qblal")]
+position = Vector2(72, -5497.856)
+
+[node name="@Area2D@114" parent="." unique_id=1855812158 instance=ExtResource("1_qblal")]
+position = Vector2(24, -5535.744)
+
+[node name="@Area2D@115" parent="." unique_id=1215024164 instance=ExtResource("1_qblal")]
+position = Vector2(48, -5558.784)
+
+[node name="@Area2D@116" parent="." unique_id=9843030 instance=ExtResource("1_qblal")]
+position = Vector2(72, -5588.48)
+
+[node name="@Area2D@117" parent="." unique_id=283650054 instance=ExtResource("1_qblal")]
+position = Vector2(24, -5627.051)
+
+[node name="@Area2D@118" parent="." unique_id=1547707422 instance=ExtResource("1_qblal")]
+position = Vector2(48, -5660.5015)
+
+[node name="@Area2D@119" parent="." unique_id=1591776937 instance=ExtResource("1_qblal")]
+position = Vector2(24, -5757.0986)
+
+[node name="@Area2D@120" parent="." unique_id=97091686 instance=ExtResource("1_qblal")]
+position = Vector2(72, -5788.3306)
+
+[node name="@Area2D@121" parent="." unique_id=949638020 instance=ExtResource("1_qblal")]
+position = Vector2(24, -5841.067)
+
+[node name="@Area2D@122" parent="." unique_id=975422745 instance=ExtResource("1_qblal")]
+position = Vector2(72, -5884.0747)
+
+[node name="@Area2D@123" parent="." unique_id=1325664001 instance=ExtResource("1_qblal")]
+position = Vector2(0, -5913.9414)
+
+[node name="@Area2D@124" parent="." unique_id=1389076384 instance=ExtResource("1_qblal")]
+position = Vector2(72, -6011.221)
+
+[node name="@Area2D@125" parent="." unique_id=1003095529 instance=ExtResource("1_qblal")]
+position = Vector2(24, -6043.136)
+
+[node name="@Area2D@126" parent="." unique_id=1195021175 instance=ExtResource("1_qblal")]
+position = Vector2(0, -6091.4346)
+
+[node name="@Area2D@127" parent="." unique_id=772471903 instance=ExtResource("1_qblal")]
+position = Vector2(72, -6127.7866)
+
+[node name="@Area2D@128" parent="." unique_id=1980717949 instance=ExtResource("1_qblal")]
+position = Vector2(0, -6142.805)
+
+[node name="@Area2D@129" parent="." unique_id=1172953994 instance=ExtResource("1_qblal")]
+position = Vector2(72, -6170.9653)
+
+[node name="@Area2D@130" parent="." unique_id=1827415091 instance=ExtResource("1_qblal")]
+position = Vector2(24, -6298.7944)
+
+[node name="@Area2D@131" parent="." unique_id=2091877416 instance=ExtResource("1_qblal")]
+position = Vector2(48, -6318.08)
+
+[node name="@Area2D@132" parent="." unique_id=944971358 instance=ExtResource("1_qblal")]
+position = Vector2(0, -6348.6294)
+
+[node name="@Area2D@133" parent="." unique_id=2142986147 instance=ExtResource("1_qblal")]
+position = Vector2(72, -6396.7573)
+
+[node name="@Area2D@134" parent="." unique_id=972021877 instance=ExtResource("1_qblal")]
+position = Vector2(24, -6427.9893)
+
+[node name="@Area2D@135" parent="." unique_id=454242318 instance=ExtResource("1_qblal")]
+position = Vector2(48, -6554.2827)
+
+[node name="@Area2D@136" parent="." unique_id=450764171 instance=ExtResource("1_qblal")]
+position = Vector2(0, -6572.8853)
+
+[node name="@Area2D@137" parent="." unique_id=1179048078 instance=ExtResource("1_qblal")]
+position = Vector2(72, -6604.117)
+
+[node name="@Area2D@138" parent="." unique_id=1355628951 instance=ExtResource("1_qblal")]
+position = Vector2(24, -6645.76)
+
+[node name="@Area2D@139" parent="." unique_id=1891455187 instance=ExtResource("1_qblal")]
+position = Vector2(48, -6680.7466)
+
+[node name="@Area2D@140" parent="." unique_id=1508344911 instance=ExtResource("1_qblal")]
+position = Vector2(0, -6815.9146)
+
+[node name="@Area2D@141" parent="." unique_id=951359116 instance=ExtResource("1_qblal")]
+position = Vector2(72, -6838.272)
+
+[node name="@Area2D@142" parent="." unique_id=271558528 instance=ExtResource("1_qblal")]
+position = Vector2(24, -6861.9946)
+
+[node name="@Area2D@143" parent="." unique_id=1720976324 instance=ExtResource("1_qblal")]
+position = Vector2(48, -6893.2266)
+
+[node name="@Area2D@144" parent="." unique_id=372938282 instance=ExtResource("1_qblal")]
+position = Vector2(0, -6910.2935)
+
+[node name="@Area2D@145" parent="." unique_id=328971239 instance=ExtResource("1_qblal")]
+position = Vector2(72, -6942.8906)
+
+[node name="@Area2D@146" parent="." unique_id=1933561495 instance=ExtResource("1_qblal")]
+position = Vector2(0, -7034.368)
+
+[node name="@Area2D@147" parent="." unique_id=2039252250 instance=ExtResource("1_qblal")]
+position = Vector2(24, -7066.2827)
+
+[node name="@Area2D@148" parent="." unique_id=1542820256 instance=ExtResource("1_qblal")]
+position = Vector2(48, -7081.131)
+
+[node name="@Area2D@149" parent="." unique_id=169495268 instance=ExtResource("1_qblal")]
+position = Vector2(0, -7116.117)
+
+[node name="@Area2D@150" parent="." unique_id=741505805 instance=ExtResource("1_qblal")]
+position = Vector2(72, -7146.496)
+
+[node name="@Area2D@151" parent="." unique_id=1493323217 instance=ExtResource("1_qblal")]
+position = Vector2(24, -7162.88)
+
+[node name="@Area2D@152" parent="." unique_id=1637033514 instance=ExtResource("1_qblal")]
+position = Vector2(72, -7199.232)
+
+[node name="@Area2D@153" parent="." unique_id=621201210 instance=ExtResource("1_qblal")]
+position = Vector2(0, -7329.28)
+
+[node name="@Area2D@154" parent="." unique_id=690142546 instance=ExtResource("1_qblal")]
+position = Vector2(24, -7339.6904)
+
+[node name="@Area2D@155" parent="." unique_id=770240108 instance=ExtResource("1_qblal")]
+position = Vector2(48, -7373.141)
+
+[node name="@Area2D@156" parent="." unique_id=677618378 instance=ExtResource("1_qblal")]
+position = Vector2(0, -7425.195)
+
+[node name="@Area2D@157" parent="." unique_id=1923506443 instance=ExtResource("1_qblal")]
+position = Vector2(24, -7461.547)
+
+[node name="@Area2D@158" parent="." unique_id=378489736 instance=ExtResource("1_qblal")]
+position = Vector2(72, -7558.9976)
+
+[node name="@Area2D@159" parent="." unique_id=1076543449 instance=ExtResource("1_qblal")]
+position = Vector2(24, -7578.2827)
+
+[node name="@Area2D@160" parent="." unique_id=50758136 instance=ExtResource("1_qblal")]
+position = Vector2(48, -7609.5146)
+
+[node name="@Area2D@161" parent="." unique_id=367612342 instance=ExtResource("1_qblal")]
+position = Vector2(0, -7630.336)
+
+[node name="@Area2D@162" parent="." unique_id=800144302 instance=ExtResource("1_qblal")]
+position = Vector2(48, -7664.469)
+
+[node name="@Area2D@163" parent="." unique_id=2078264700 instance=ExtResource("1_qblal")]
+position = Vector2(0, -7686.8267)
+
+[node name="@Area2D@164" parent="." unique_id=666664029 instance=ExtResource("1_qblal")]
+position = Vector2(72, -7717.2056)
+
+[node name="@Area2D@165" parent="." unique_id=1306662178 instance=ExtResource("1_qblal")]
+position = Vector2(0, -7808.6826)
+
+[node name="@Area2D@166" parent="." unique_id=2083905811 instance=ExtResource("1_qblal")]
+position = Vector2(72, -7823.531)
+
+[node name="@Area2D@167" parent="." unique_id=673895981 instance=ExtResource("1_qblal")]
+position = Vector2(24, -7841.963)
+
+[node name="@Area2D@168" parent="." unique_id=1787170325 instance=ExtResource("1_qblal")]
+position = Vector2(48, -7876.949)
+
+[node name="@Area2D@169" parent="." unique_id=1470650472 instance=ExtResource("1_qblal")]
+position = Vector2(72, -7925.9307)
+
+[node name="@Area2D@170" parent="." unique_id=493558639 instance=ExtResource("1_qblal")]
+position = Vector2(0, -7939.4136)
+
+[node name="@Area2D@171" parent="." unique_id=754662608 instance=ExtResource("1_qblal")]
+position = Vector2(24, -7972.0107)
+
+[node name="@Area2D@172" parent="." unique_id=2123793514 instance=ExtResource("1_qblal")]
+position = Vector2(72, -8096.0854)
+
+[node name="@Area2D@173" parent="." unique_id=1263255889 instance=ExtResource("1_qblal")]
+position = Vector2(0, -8114.0054)
+
+[node name="@Area2D@174" parent="." unique_id=650682013 instance=ExtResource("1_qblal")]
+position = Vector2(48, -8143.701)
+
+[node name="@Area2D@175" parent="." unique_id=1255218217 instance=ExtResource("1_qblal")]
+position = Vector2(24, -8174.2505)
+
+[node name="@Area2D@176" parent="." unique_id=839379712 instance=ExtResource("1_qblal")]
+position = Vector2(0, -8191.3174)
+
+[node name="@Area2D@177" parent="." unique_id=131680085 instance=ExtResource("1_qblal")]
+position = Vector2(72, -8224.768)
+
+[node name="@Area2D@178" parent="." unique_id=2118040512 instance=ExtResource("1_qblal")]
+position = Vector2(24, -8291.499)
+
+[node name="@Area2D@179" parent="." unique_id=841144138 instance=ExtResource("1_qblal")]
+position = Vector2(48, -8347.307)
+
+[node name="@Area2D@180" parent="." unique_id=1951707801 instance=ExtResource("1_qblal")]
+position = Vector2(24, -8394.069)
+
+[node name="@Area2D@181" parent="." unique_id=1446460131 instance=ExtResource("1_qblal")]
+position = Vector2(0, -8397.824)
+
+[node name="@Area2D@182" parent="." unique_id=2144261245 instance=ExtResource("1_qblal")]
+position = Vector2(72, -8475.136)
+
+[node name="@Area2D@183" parent="." unique_id=2017200947 instance=ExtResource("1_qblal")]
+position = Vector2(0, -8536.747)
+
+[node name="@Area2D@184" parent="." unique_id=270623583 instance=ExtResource("1_qblal")]
+position = Vector2(72, -8599.894)
+
+[node name="@Area2D@185" parent="." unique_id=429403652 instance=ExtResource("1_qblal")]
+position = Vector2(24, -8660.139)
+
+[node name="@Area2D@186" parent="." unique_id=1383855972 instance=ExtResource("1_qblal")]
+position = Vector2(48, -8688.299)
+
+[node name="@Area2D@187" parent="." unique_id=1136653394 instance=ExtResource("1_qblal")]
+position = Vector2(24, -8731.478)
+
+[node name="@Area2D@188" parent="." unique_id=1599891675 instance=ExtResource("1_qblal")]
+position = Vector2(0, -8827.222)
+
+[node name="@Area2D@189" parent="." unique_id=155947274 instance=ExtResource("1_qblal")]
+position = Vector2(72, -8862.208)
+
+[node name="@Area2D@190" parent="." unique_id=1855722422 instance=ExtResource("1_qblal")]
+position = Vector2(0, -8909.824)
+
+[node name="@Area2D@191" parent="." unique_id=341738320 instance=ExtResource("1_qblal")]
+position = Vector2(72, -8937.302)
+
+[node name="@Area2D@192" parent="." unique_id=714530762 instance=ExtResource("1_qblal")]
+position = Vector2(0, -8952.149)
+
+[node name="@Area2D@193" parent="." unique_id=496966188 instance=ExtResource("1_qblal")]
+position = Vector2(24, -8981.846)
+
+[node name="@Area2D@194" parent="." unique_id=753127853 instance=ExtResource("1_qblal")]
+position = Vector2(48, -9035.264)
+
+[node name="@Area2D@195" parent="." unique_id=1095689561 instance=ExtResource("1_qblal")]
+position = Vector2(72, -9085.099)
+
+[node name="@Area2D@196" parent="." unique_id=1818385090 instance=ExtResource("1_qblal")]
+position = Vector2(0, -9171.285)
+
+[node name="@Area2D@197" parent="." unique_id=1890033524 instance=ExtResource("1_qblal")]
+position = Vector2(24, -9192.789)
+
+[node name="@Area2D@198" parent="." unique_id=888636982 instance=ExtResource("1_qblal")]
+position = Vector2(48, -9207.808)
+
+[node name="@Area2D@199" parent="." unique_id=1460058483 instance=ExtResource("1_qblal")]
+position = Vector2(72, -9235.285)
+
+[node name="@Area2D@200" parent="." unique_id=395883928 instance=ExtResource("1_qblal")]
+position = Vector2(0, -9338.539)
+
+[node name="@Area2D@201" parent="." unique_id=1115518772 instance=ExtResource("1_qblal")]
+position = Vector2(24, -9372.672)
+
+[node name="@Area2D@202" parent="." unique_id=763090983 instance=ExtResource("1_qblal")]
+position = Vector2(48, -9434.282)
+
+[node name="@Area2D@203" parent="." unique_id=1982913937 instance=ExtResource("1_qblal")]
+position = Vector2(24, -9503.402)
+
+[node name="@Area2D@205" parent="." unique_id=1284795511 instance=ExtResource("1_qblal")]
+position = Vector2(0, -9618.603)
+
+[node name="@Area2D@206" parent="." unique_id=1451368830 instance=ExtResource("1_qblal")]
+position = Vector2(24, -9772.373)
+
+[node name="@Area2D@207" parent="." unique_id=1901489340 instance=ExtResource("1_qblal")]
+position = Vector2(24, -9857.877)
+
+[node name="@Area2D@208" parent="." unique_id=181376535 instance=ExtResource("1_qblal")]
+position = Vector2(48, -9892.011)
+
+[node name="@Area2D@209" parent="." unique_id=1657953358 instance=ExtResource("1_qblal")]
+position = Vector2(0, -9946.282)
+
+[node name="@Area2D@210" parent="." unique_id=225001107 instance=ExtResource("1_qblal")]
+position = Vector2(24, -10012.501)
+
+[node name="@Area2D@211" parent="." unique_id=2099922277 instance=ExtResource("1_qblal")]
+position = Vector2(24, -10137.259)
+
+[node name="@Area2D@212" parent="." unique_id=736733212 instance=ExtResource("1_qblal")]
+position = Vector2(0, -10198.869)
+
+[node name="@Area2D@213" parent="." unique_id=1360806699 instance=ExtResource("1_qblal")]
+position = Vector2(24, -10233.173)
+
+[node name="@Area2D@214" parent="." unique_id=204742910 instance=ExtResource("1_qblal")]
+position = Vector2(48, -10267.989)
+
+[node name="@Area2D@215" parent="." unique_id=211201966 instance=ExtResource("1_qblal")]
+position = Vector2(72, -10369.024)
+
+[node name="@Area2D@216" parent="." unique_id=705723443 instance=ExtResource("1_qblal")]
+position = Vector2(0, -10405.547)
+
+[node name="@Area2D@217" parent="." unique_id=1647838674 instance=ExtResource("1_qblal")]
+position = Vector2(24, -10574.848)
+
+[node name="@Area2D@218" parent="." unique_id=1523187098 instance=ExtResource("1_qblal")]
+position = Vector2(48, -10650.624)
+
+[node name="@Area2D@219" parent="." unique_id=607824263 instance=ExtResource("1_qblal")]
+position = Vector2(0, -10675.883)
+
+[node name="@Area2D@220" parent="." unique_id=911858852 instance=ExtResource("1_qblal")]
+position = Vector2(24, -10736.811)
+
+[node name="@Area2D@221" parent="." unique_id=1267614598 instance=ExtResource("1_qblal")]
+position = Vector2(48, -10781.525)
+
+[node name="@Area2D@222" parent="." unique_id=2102699368 instance=ExtResource("1_qblal")]
+position = Vector2(24, -10813.44)
+
+[node name="@Area2D@223" parent="." unique_id=560914976 instance=ExtResource("1_qblal")]
+position = Vector2(48, -10900.31)
+
+[node name="@Area2D@224" parent="." unique_id=2069993284 instance=ExtResource("1_qblal")]
+position = Vector2(0, -10932.224)
+
+[node name="@Area2D@225" parent="." unique_id=723188798 instance=ExtResource("1_qblal")]
+position = Vector2(24, -10982.912)
+
+[node name="@Area2D@226" parent="." unique_id=461189538 instance=ExtResource("1_qblal")]
+position = Vector2(0, -11042.986)
+
+[node name="@Area2D@227" parent="." unique_id=1973560017 instance=ExtResource("1_qblal")]
+position = Vector2(48, -11072.683)
+
+[node name="@Area2D@228" parent="." unique_id=864987598 instance=ExtResource("1_qblal")]
+position = Vector2(72, -11164.843)
+
+[node name="@Area2D@229" parent="." unique_id=299136557 instance=ExtResource("1_qblal")]
+position = Vector2(24, -11196.758)
+
+[node name="@Area2D@230" parent="." unique_id=1973193607 instance=ExtResource("1_qblal")]
+position = Vector2(48, -11242.837)
+
+[node name="@Area2D@231" parent="." unique_id=1795446646 instance=ExtResource("1_qblal")]
+position = Vector2(24, -11288.917)
+
+[node name="@Area2D@232" parent="." unique_id=1449326 instance=ExtResource("1_qblal")]
+position = Vector2(72, -11319.467)
+
+[node name="@Area2D@233" parent="." unique_id=1743475520 instance=ExtResource("1_qblal")]
+position = Vector2(0, -11415.211)
+
+[node name="@Area2D@234" parent="." unique_id=18395751 instance=ExtResource("1_qblal")]
+position = Vector2(48, -11448.661)
+
+[node name="@Area2D@235" parent="." unique_id=98911240 instance=ExtResource("1_qblal")]
+position = Vector2(24, -11504.47)
+
+[node name="@Area2D@236" parent="." unique_id=434497284 instance=ExtResource("1_qblal")]
+position = Vector2(72, -11547.478)
+
+[node name="@Area2D@237" parent="." unique_id=705974715 instance=ExtResource("1_qblal")]
+position = Vector2(24, -11580.928)
+
+[node name="@Area2D@238" parent="." unique_id=597362047 instance=ExtResource("1_qblal")]
+position = Vector2(48, -11678.379)
+
+[node name="@Area2D@239" parent="." unique_id=890943218 instance=ExtResource("1_qblal")]
+position = Vector2(0, -11713.194)
+
+[node name="@Area2D@240" parent="." unique_id=160944128 instance=ExtResource("1_qblal")]
+position = Vector2(24, -11761.493)
+
+[node name="@Area2D@241" parent="." unique_id=1342409906 instance=ExtResource("1_qblal")]
+position = Vector2(0, -11806.891)
+
+[node name="@Area2D@242" parent="." unique_id=1576638453 instance=ExtResource("1_qblal")]
+position = Vector2(24, -11840.342)
+
+[node name="@Area2D@243" parent="." unique_id=975066691 instance=ExtResource("1_qblal")]
+position = Vector2(48, -11932.501)
+
+[node name="@Area2D@244" parent="." unique_id=151788919 instance=ExtResource("1_qblal")]
+position = Vector2(72, -11966.635)
+
+[node name="@Area2D@245" parent="." unique_id=1923098992 instance=ExtResource("1_qblal")]
+position = Vector2(0, -11978.411)
+
+[node name="@Area2D@246" parent="." unique_id=103534677 instance=ExtResource("1_qblal")]
+position = Vector2(72, -12014.08)
+
+[node name="@Area2D@247" parent="." unique_id=1531440985 instance=ExtResource("1_qblal")]
+position = Vector2(0, -12046.848)
+
+[node name="@Area2D@248" parent="." unique_id=1908911293 instance=ExtResource("1_qblal")]
+position = Vector2(48, -12091.392)
+
+[node name="@Area2D@249" parent="." unique_id=1466196359 instance=ExtResource("1_qblal")]
+position = Vector2(24, -12191.062)
+
+[node name="@Area2D@250" parent="." unique_id=497755941 instance=ExtResource("1_qblal")]
+position = Vector2(0, -12218.539)
+
+[node name="@Area2D@251" parent="." unique_id=694413075 instance=ExtResource("1_qblal")]
+position = Vector2(48, -12253.3545)
+
+[node name="@Area2D@252" parent="." unique_id=492749487 instance=ExtResource("1_qblal")]
+position = Vector2(72, -12280.832)
+
+[node name="@Area2D@253" parent="." unique_id=1705271300 instance=ExtResource("1_qblal")]
+position = Vector2(24, -12315.136)
+
+[node name="@Area2D@254" parent="." unique_id=1335733446 instance=ExtResource("1_qblal")]
+position = Vector2(48, -12335.104)
+
+[node name="@Area2D@255" parent="." unique_id=1885531800 instance=ExtResource("1_qblal")]
+position = Vector2(0, -12417.707)
+
+[node name="@Area2D@256" parent="." unique_id=1358462612 instance=ExtResource("1_qblal")]
+position = Vector2(24, -12446.55)
+
+[node name="@Area2D@257" parent="." unique_id=397716559 instance=ExtResource("1_qblal")]
+position = Vector2(48, -12500.139)
+
+[node name="@Area2D@258" parent="." unique_id=1543133068 instance=ExtResource("1_qblal")]
+position = Vector2(72, -12540.245)
+
+[node name="@Area2D@259" parent="." unique_id=271760761 instance=ExtResource("1_qblal")]
+position = Vector2(0, -12567.04)
+
+[node name="@Area2D@260" parent="." unique_id=1880307763 instance=ExtResource("1_qblal")]
+position = Vector2(24, -12668.758)
+
+[node name="@Area2D@261" parent="." unique_id=1809645326 instance=ExtResource("1_qblal")]
+position = Vector2(48, -12702.208)
+
+[node name="@Area2D@262" parent="." unique_id=1431376334 instance=ExtResource("1_qblal")]
+position = Vector2(0, -12733.44)
+
+[node name="@Area2D@263" parent="." unique_id=2098723136 instance=ExtResource("1_qblal")]
+position = Vector2(24, -12752.043)
+
+[node name="@Area2D@264" parent="." unique_id=612567087 instance=ExtResource("1_qblal")]
+position = Vector2(48, -12781.738)
+
+[node name="@Area2D@265" parent="." unique_id=2063769232 instance=ExtResource("1_qblal")]
+position = Vector2(24, -12830.037)
+
+[node name="@Area2D@266" parent="." unique_id=2039885051 instance=ExtResource("1_qblal")]
+position = Vector2(48, -12863.488)
+
+[node name="@Area2D@267" parent="." unique_id=1556171546 instance=ExtResource("1_qblal")]
+position = Vector2(24, -12928.171)
+
+[node name="@Area2D@268" parent="." unique_id=2066984090 instance=ExtResource("1_qblal")]
+position = Vector2(0, -12957.866)
+
+[node name="@Area2D@269" parent="." unique_id=1046697083 instance=ExtResource("1_qblal")]
+position = Vector2(24, -12978.688)
+
+[node name="@Area2D@270" parent="." unique_id=638779097 instance=ExtResource("1_qblal")]
+position = Vector2(48, -13009.066)
+
+[node name="@Area2D@271" parent="." unique_id=73818715 instance=ExtResource("1_qblal")]
+position = Vector2(0, -13055.829)
+
+[node name="@Area2D@272" parent="." unique_id=933321656 instance=ExtResource("1_qblal")]
+position = Vector2(72, -13082.624)
+
+[node name="@Area2D@273" parent="." unique_id=326759053 instance=ExtResource("1_qblal")]
+position = Vector2(48, -13180.758)
+
+[node name="@Area2D@274" parent="." unique_id=398388280 instance=ExtResource("1_qblal")]
+position = Vector2(24, -13211.136)
+
+[node name="@Area2D@275" parent="." unique_id=359717858 instance=ExtResource("1_qblal")]
+position = Vector2(0, -13230.421)
+
+[node name="@Area2D@276" parent="." unique_id=131909266 instance=ExtResource("1_qblal")]
+position = Vector2(72, -13258.752)
+
+[node name="@Area2D@277" parent="." unique_id=1047735918 instance=ExtResource("1_qblal")]
+position = Vector2(24, -13295.104)
+
+[node name="@Area2D@278" parent="." unique_id=1095957544 instance=ExtResource("1_qblal")]
+position = Vector2(48, -13307.051)
+
+[node name="@Area2D@279" parent="." unique_id=1231088831 instance=ExtResource("1_qblal")]
+position = Vector2(72, -13343.402)

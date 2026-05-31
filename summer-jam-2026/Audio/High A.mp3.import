@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6q8o4afvifex"
+path="res://.godot/imported/High A.mp3-a0d0c97891ae1644a3b31f1cf1aa7185.mp3str"
+
+[deps]
+
+source_file="res://Audio/High A.mp3"
+dest_files=["res://.godot/imported/High A.mp3-a0d0c97891ae1644a3b31f1cf1aa7185.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
