@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhsbk04843cja"
+path="res://.godot/imported/Sheep SFX.mp3-30f3168239942dda1419989cda29e1de.mp3str"
+
+[deps]
+
+source_file="res://Audio/Sheep SFX.mp3"
+dest_files=["res://.godot/imported/Sheep SFX.mp3-30f3168239942dda1419989cda29e1de.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

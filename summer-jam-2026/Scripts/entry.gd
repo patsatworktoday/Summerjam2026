@@ -4,16 +4,18 @@ extends Sprite2D
 @export var animals:Array[String] = ["worm","sheep","raven","sloth","slug","penguin","priest"]
 @export var attire:Array[String] = ["none","monocle","sunglasses"]
 
-@export var movement_speed:float = 1000
+@export var init_movement_speed:float = 1000
 @onready var animated_sprite = $Animal_sliding
 @onready var attire_sprite = $Animal_sliding/Attire
 @onready var Audio:AudioStreamPlayer2D = get_tree().get_first_node_in_group("Audio")
 @onready var pusher:Sprite2D = get_tree().get_first_node_in_group("pusher") 
 var pusher_scale
 var score:float
+var movement_speed:float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	movement_speed = init_movement_speed
 	pusher_scale = pusher.scale
 	score = 0
 	pass # Replace with function body.
@@ -43,9 +45,12 @@ func select_new_attire() -> String:
 	return attire[random_number]
 	
 func play_animations(animal:String,clothes:String):
+	if animated_sprite.animal_score %5 == 0:
+		movement_speed += 10
 	#set the animations to play
 	pusher.scale = pusher_scale
 	animated_sprite.animal_string = animal
+	animated_sprite.clothes_string = clothes
 	animated_sprite.idle_string = animal+"_idle"
 	animated_sprite.die_string = animal+"_die"
 	if clothes != "none":
