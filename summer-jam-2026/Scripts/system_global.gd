@@ -1,7 +1,8 @@
 extends Node
 
 
-
+var animal_score:float = 0
+var note_score:float = 0
 var most_recent_score:float = 0.0
 
 var Player_Scores:Array = [{"name":"Pat","score":-1.0}]

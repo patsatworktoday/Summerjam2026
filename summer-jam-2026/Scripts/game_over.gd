@@ -12,12 +12,12 @@ func _ready() -> void:
 	write_leaderboard()
 
 func _on_play_again_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	get_tree().change_scene_to_file("res://Scenees/testingcombined.tscn")
 
 
 func _on_title_pressed() -> void:
 	SystemGlobal.most_recent_score = 0
-	get_tree().change_scene_to_file("res://Scenes/title.tscn")
+	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
 	GetName.visible = false
