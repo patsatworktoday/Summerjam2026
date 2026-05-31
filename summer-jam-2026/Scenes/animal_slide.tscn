@@ -9261,7 +9261,7 @@ animations = [{
 [node name="background" type="Sprite2D" parent="." unique_id=1007104229]
 z_index = -4
 position = Vector2(572, 277.00003)
-rotation = 0.12780063
+rotation = 0.15707964
 scale = Vector2(1.53, 1.53)
 texture = ExtResource("1_5tf44")
 
@@ -9278,7 +9278,7 @@ texture = ExtResource("3_88v4h")
 script = ExtResource("3_whgcl")
 
 [node name="Animal_sliding" parent="Entry" unique_id=833712026 instance=ExtResource("1_eys81")]
-position = Vector2(9.343069, 0.47058368)
+position = Vector2(11.678836, 0.47058368)
 scale = Vector2(0.26788324, 0.30849674)
 sprite_frames = SubResource("SpriteFrames_ok2dj")
 animation = &"priest_idle"

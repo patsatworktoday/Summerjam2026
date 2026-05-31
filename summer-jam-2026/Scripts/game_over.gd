@@ -12,7 +12,7 @@ func _ready() -> void:
 	write_leaderboard()
 
 func _on_play_again_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenees/testingcombined.tscn")
+	get_tree().change_scene_to_file("res://Scenes/testingcombined.tscn")
 
 
 func _on_title_pressed() -> void:
